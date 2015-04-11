@@ -1,13 +1,17 @@
+@import url(http://fonts.googleapis.com/css?family=La+Belle+Aurore|Nothing+You+Could+Do);
+
 * {
   margin: 0;
   padding: 0;
 }
 
 header h1 {
+  text-align: center; 
+  font-family: 'Nothing You Could Do', cursive;
   font-size: 4em;
 }
 
-header {
+header { 
   margin-bottom: .5em;
 }
 
@@ -36,8 +40,9 @@ section.main {
 }
 
 .board {
+  width: 90%;
+  margin: auto;
   margin-bottom: 1em;
-  width: 100%;
 }
 
 .card {
@@ -70,9 +75,22 @@ header h1 {
 }
 
 @media (max-width: 550px){
+ header h1 {
+    font-size: 2.75em;
+  }
+
+  header {
+    margin-bottom: .1em;
+  }
+
+
+  .board {
+    width: 16.75em;
+  }
   .card {
     width: 5em;
     height: 5em;
+    margin: .21em; 
   }
   .card_value {
     font-size: 3.75em;

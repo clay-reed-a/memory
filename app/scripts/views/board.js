@@ -62,7 +62,8 @@ Memory.Views = Memory.Views || {};
           
           $('header h1').text('You remembered!')
             .css('color', 'black')
-            .css('visibility', 'visible');
+            .css('visibility', 'visible')
+            .css('margin-top', '2em');
 
             setTimeout(function(){
               window.location.reload(false);
