@@ -14,7 +14,7 @@ Memory.Views = Memory.Views || {};
         className: 'card',
 
         events: {
-            'click': 'uncoverCard'
+          'click': 'uncoverCard'
         },
 
         uncoveredCardsCounter: 0,
@@ -90,8 +90,8 @@ Memory.Views = Memory.Views || {};
 
 
         render: function () {
-            this.$el.html(this.template(this.model.toJSON()));
-            return this; 
+          this.$el.html(this.template(this.model.toJSON()));
+          return this; 
         }
 
     });

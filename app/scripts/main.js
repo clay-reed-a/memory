@@ -14,8 +14,9 @@ window.Memory = {
             'ο', 'π', 'ρ', 'σ', 'τ', 'υ', 'φ', 
             'χ', 'ψ', 'ω'
         ], 
-            colors = ['red', 'yellow', 'green', 
-                      'blue', 'orange', 'purple'];
+                // r, o, y, g, b, p 
+            colors = ['#FC1501', '#FF7F00', '#FFE600', 
+                      '#0e1', '#0BB5FF', '#C0F'];
 
 
 
