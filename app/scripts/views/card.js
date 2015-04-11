@@ -56,6 +56,15 @@ Memory.Views = Memory.Views || {};
 
         uncoverCard: function(){
           var that = this; 
+
+          if (this.$gameHeader.css('color') === 'rgb(0, 0, 0)'){
+            console.log('the header is black!');
+            this.$gameHeader.css('color', 'white');
+            setTimeout(function(){
+              that.$gameHeader.css('visibility', 'hidden');
+            }, 1000);
+          }
+          
           if ((this.uncoveredCardsCounter < 2) &&
             !this.isUncovered){
             Memory.Events.trigger('UncoveredCardEvent', this.model.toJSON());
@@ -68,6 +77,7 @@ Memory.Views = Memory.Views || {};
         },
 
         initialize: function () {
+          this.$gameHeader = $('header h1');
           this.listenTo(Memory.Events, 'UnuncoveredCardEvent', this.decrementUncoveredCardsCounter); 
           this.listenTo(Memory.Events, 'UncoveredCardsMatchEvent', this.removeUncoveredCard); 
           this.listenTo(Memory.Events, 'UncoveredCardsDoNotMatchEvent', this.recoverUncoveredCard);
