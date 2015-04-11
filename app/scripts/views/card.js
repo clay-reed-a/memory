@@ -59,14 +59,14 @@ Memory.Views = Memory.Views || {};
           var that = this; 
 
           if (this.$gameHeader.css('color') === 'rgb(0, 0, 0)'){
-            console.log('header is black!');
+            
             this.$gameHeader.css('color', 'white');
             setTimeout(function(){
               that.$gameHeader.css('visibility', 'hidden');
             }, 1000);
           }
           
-          console.log(this.uncoveredCardsCounter);
+          
           if ((this.uncoveredCardsCounter < 2) &&
             !this.isUncovered){
             Memory.Events.trigger('UncoveredCardEvent', this.model.toJSON());

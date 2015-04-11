@@ -8,9 +8,14 @@ window.Memory = {
     Events: {},
     init: function() {
         'use strict';
-        var letters = [
-            'α', 'β', 'γ', 'δ', 'ε', 'θ'
-        ], 
+        var allLetters = [
+            'α', 'β', 'γ', 'δ', 'ε', 'ζ', 'η',
+            'θ', 'ι', 'κ', 'λ', 'μ', 'ν', 'ξ', 
+            'ο', 'π', 'ρ', 'σ', 'τ', 'υ', 'φ', 
+            'χ', 'ψ', 'ω'
+        ];
+
+        var letters = _.sample(allLetters, 6), 
             cards = new Memory.Collections.Cards();
 
         _.each(letters, function(letter){
