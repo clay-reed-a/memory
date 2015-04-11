@@ -35,7 +35,11 @@ Memory.Views = Memory.Views || {};
         },
 
         recoverUncoveredCard: function(){
+          var that = this; 
           this.$('.card_value').css('color', 'black');
+          setTimeout(function(){
+            that.$('.card_value').css('display', 'none');
+          }, 1000);
           this.isUncovered = false; 
           Memory.Events.trigger('UnuncoveredCardEvent');
           
@@ -46,10 +50,14 @@ Memory.Views = Memory.Views || {};
         },
 
         uncoverCard: function(){
+          var that = this; 
           if ((this.uncoveredCardsCounter < 2) &&
             !this.isUncovered){
             Memory.Events.trigger('UncoveredCardEvent', this.model.toJSON());
-            this.$('.card_value').css('color', 'white');
+            this.$('.card_value').css('display', 'block');
+            setTimeout(function(){
+              that.$('.card_value').css('color', 'white');
+            }, 250);
             this.isUncovered = true; 
           };
         },
