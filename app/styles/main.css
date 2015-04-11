@@ -7,6 +7,28 @@ header h1 {
   font-size: 4em;
 }
 
+header {
+  margin-bottom: .5em;
+}
+
+/* begin clearfix */
+body:after,
+body:before, 
+section.main:after,
+section.main:before,
+.board:after,
+.board:before {
+  content: '';
+  display: table;
+}
+
+body:after,
+section.main:after,
+.board:after {
+  clear: both;
+}
+/* end clearfix */
+
 section.main {
   width: 90%;
   max-width: 30em;
@@ -14,6 +36,7 @@ section.main {
 }
 
 .board {
+  margin-bottom: 1em;
   width: 100%;
 }
 
