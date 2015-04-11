@@ -59,10 +59,16 @@ Memory.Views = Memory.Views || {};
         if (_.every(this.collection.models, function(model){
           return model.get('isMatched');
         })) {
-          console.log('You won!');
-        } else {
-          console.log('You have not won!');
-        }
+          
+          $('header h1').text('You remembered!')
+            .css('color', 'black')
+            .css('visibility', 'visible');
+
+            setTimeout(function(){
+              window.location.reload(false);
+            }, 1500);
+
+        } 
       },
 
       initialize: function () {

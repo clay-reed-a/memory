@@ -41,13 +41,14 @@ Memory.Views = Memory.Views || {};
 
         recoverUncoveredCard: function(){
           var that = this; 
-          this.$('.card_value').css('color', 'black');
-          setTimeout(function(){
-            that.$('.card_value').css('display', 'none');
-          }, 1000);
-          this.isUncovered = false; 
-          Memory.Events.trigger('UnuncoveredCardEvent');
-          
+          if (this.isUncovered){
+            this.$('.card_value').css('color', 'black');
+            setTimeout(function(){
+              that.$('.card_value').css('display', 'none');
+            }, 1000);
+            this.isUncovered = false; 
+            Memory.Events.trigger('UnuncoveredCardEvent');
+          }    
         },
 
         decrementUncoveredCardsCounter: function(){
@@ -58,13 +59,14 @@ Memory.Views = Memory.Views || {};
           var that = this; 
 
           if (this.$gameHeader.css('color') === 'rgb(0, 0, 0)'){
-            console.log('the header is black!');
+            console.log('header is black!');
             this.$gameHeader.css('color', 'white');
             setTimeout(function(){
               that.$gameHeader.css('visibility', 'hidden');
             }, 1000);
           }
           
+          console.log(this.uncoveredCardsCounter);
           if ((this.uncoveredCardsCounter < 2) &&
             !this.isUncovered){
             Memory.Events.trigger('UncoveredCardEvent', this.model.toJSON());
