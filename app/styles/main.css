@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=La+Belle+Aurore|Nothing+You+Could+Do);
+@import url(http://fonts.googleapis.com/css?family=Nothing+You+Could+Do);
 
 * {
   margin: 0;
@@ -82,7 +82,6 @@ header h1 {
   header {
     margin-bottom: .1em;
   }
-
 
   .board {
     width: 16.75em;

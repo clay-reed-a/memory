@@ -51,7 +51,7 @@ Memory.Views = Memory.Views || {};
           setTimeout(function(){
             Memory.Events.trigger('UncoveredCardsDoNotMatchEvent');
             that.resetUncoveredCards();
-          }, 1000);
+          }, 1250);
         }; 
       },
 
