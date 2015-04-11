@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+  float: left;
+  width: 4em;
+  height: 4em;
+  position: relative;
+  background-color: black;
+  margin: .25em; 
+}
+
+.card:nth-child(3n+4) {
+  clear: left;
+}
+
+.card_value {
+  font-size: 3em;
+  text-align: center;
+  color: black;
+  display: block;
+  position: absolute;
+  margin: auto;
+  top: 0; bottom: 0; left: 0; right: 0;
+  transition: color 1s ease-in;
+}
