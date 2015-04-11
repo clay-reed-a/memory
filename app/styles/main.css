@@ -13,6 +13,10 @@ section.main {
   margin: auto; 
 }
 
+.board {
+  width: 100%;
+}
+
 .card {
   float: left;
   width: 8em;
@@ -40,4 +44,14 @@ header h1 {
   position: absolute;
   margin: auto;
   top: 0; bottom: 0; left: 0; right: 0;
+}
+
+@media (max-width: 550px){
+  .card {
+    width: 5em;
+    height: 5em;
+  }
+  .card_value {
+    font-size: 3.75em;
+  }
 }
