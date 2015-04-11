@@ -20,6 +20,7 @@ section.main {
   position: relative;
   background-color: black;
   margin: .5em; 
+  transition: background-color 1s ease-in;
 }
 
 .card:nth-child(3n+4) {

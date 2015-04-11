@@ -26,8 +26,13 @@ Memory.Views = Memory.Views || {};
         },
 
         removeUncoveredCard: function(){
+          var that = this; 
           if (this.isUncovered) {
-            this.$el.css('visibility', 'hidden');
+            this.$el.css('background-color', 'white');
+            this.$('.card_value').css('color', 'white');
+            setTimeout(function(){
+              that.$el.css('visibility', 'hidden');
+            }, 1000);
             this.model.set('isMatched', true); 
             this.isUncovered = false; 
             Memory.Events.trigger('UnuncoveredCardEvent');
