@@ -72,7 +72,8 @@ Memory.Views = Memory.Views || {};
             Memory.Events.trigger('UncoveredCardEvent', this.model.toJSON());
             this.$('.card_value').css('display', 'block');
             setTimeout(function(){
-              that.$('.card_value').css('color', 'white');
+              that.$('.card_value').css('color', 
+                that.model.get('cardColor'));
             }, 250);
             this.isUncovered = true; 
           };

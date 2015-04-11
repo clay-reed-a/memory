@@ -13,13 +13,18 @@ window.Memory = {
             'θ', 'ι', 'κ', 'λ', 'μ', 'ν', 'ξ', 
             'ο', 'π', 'ρ', 'σ', 'τ', 'υ', 'φ', 
             'χ', 'ψ', 'ω'
-        ];
+        ], 
+            colors = ['red', 'yellow', 'green', 
+                      'blue', 'orange', 'purple'];
+
+
 
         var letters = _.sample(allLetters, 6), 
             cards = new Memory.Collections.Cards();
 
-        _.each(letters, function(letter){
-            var attrs         = {cardValue: letter}; 
+        _.each(letters, function(letter, idx){
+            var attrs         = {cardValue: letter,
+                                 cardColor: colors[idx]}; 
             var cardPairFirst = new Memory.Models.Card(attrs),  
                cardPairSecond = new Memory.Models.Card(attrs);
             
