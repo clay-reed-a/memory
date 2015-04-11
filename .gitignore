@@ -1,5 +1,5 @@
 node_modules
-dist
+# dist Use dist for production 
 test/temp
 .sass-cache
 app/bower_components
