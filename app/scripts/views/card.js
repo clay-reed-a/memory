@@ -32,7 +32,7 @@ Memory.Views = Memory.Views || {};
             this.$('.card_value').css('color', 'white');
             setTimeout(function(){
               that.$el.css('visibility', 'hidden');
-            }, 1000);
+            }, 750);
             this.model.set('isMatched', true); 
             this.isUncovered = false; 
             Memory.Events.trigger('UnuncoveredCardEvent');
@@ -45,7 +45,7 @@ Memory.Views = Memory.Views || {};
             this.$('.card_value').css('color', 'black');
             setTimeout(function(){
               that.$('.card_value').css('display', 'none');
-            }, 1000);
+            }, 750);
             this.isUncovered = false; 
             Memory.Events.trigger('UnuncoveredCardEvent');
           }    
@@ -63,7 +63,7 @@ Memory.Views = Memory.Views || {};
             this.$gameHeader.css('color', 'white');
             setTimeout(function(){
               that.$gameHeader.css('visibility', 'hidden');
-            }, 1000);
+            }, 750);
           }
           
           

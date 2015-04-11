@@ -18,6 +18,7 @@ Memory.Views = Memory.Views || {};
       events: {},
 
       uncoveredCards: [], 
+      moves: 0, 
 
       resetUncoveredCards: function(){
         this.uncoveredCards = [];
@@ -27,6 +28,7 @@ Memory.Views = Memory.Views || {};
         this.uncoveredCards.push(cardObj);
         Memory.Events.trigger('UncoveredCardAddedEvent');
         if (this.uncoveredCards.length === 2){
+          this.moves += 1; 
           this.testIfMatch(); 
         }
       },
@@ -45,13 +47,13 @@ Memory.Views = Memory.Views || {};
             that.resetUncoveredCards();
             setTimeout(function(){
               that.seeIfWon();
-            }, 1000);
-          }, 1000);
+            }, 750);
+          }, 750);
         } else {
           setTimeout(function(){
             Memory.Events.trigger('UncoveredCardsDoNotMatchEvent');
             that.resetUncoveredCards();
-          }, 1250);
+          }, 1000);
         }; 
       },
 
@@ -64,10 +66,10 @@ Memory.Views = Memory.Views || {};
             .css('color', 'black')
             .css('visibility', 'visible')
             .css('margin-top', '2em');
-
-            setTimeout(function(){
-              window.location.reload(false);
-            }, 1500);
+          console.log('You won in '+this.moves+' moves!');
+          setTimeout(function(){
+            window.location.reload(false);
+          }, 1500);
 
         } 
       },

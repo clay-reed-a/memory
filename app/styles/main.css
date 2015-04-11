@@ -52,7 +52,7 @@ section.main {
   position: relative;
   background-color: black;
   margin: .5em; 
-  transition: background-color 1s ease-in;
+  transition: background-color .75s ease-in;
 }
 
 .card:nth-child(3n+4) {
@@ -61,7 +61,7 @@ section.main {
 
 .card_value, 
 header h1 {
-  transition: color 1s ease-in;
+  transition: color .75s ease-in;
 }
 
 .card_value {
