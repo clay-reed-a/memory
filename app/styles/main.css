@@ -46,6 +46,7 @@ section.main {
 }
 
 .card {
+  cursor: pointer;
   float: left;
   width: 8em;
   height: 8em;
