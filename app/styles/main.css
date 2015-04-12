@@ -53,6 +53,7 @@ section.main {
   background-color: black;
   margin: .5em; 
   transition: background-color .75s ease-in;
+  border-radius: .25em;
 }
 
 .card:nth-child(3n+4) {
