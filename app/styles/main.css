@@ -53,6 +53,7 @@ section.main {
   background-color: black;
   margin: .5em; 
   transition: background-color .75s ease-in;
+  -webkit-transition: background-color .75s ease-in;
   border-radius: .25em;
 }
 
@@ -63,6 +64,7 @@ section.main {
 .card_value, 
 header h1 {
   transition: color .75s ease-in;
+  -webkit-transition: color .75s ease-in;
 }
 
 .card_value {
