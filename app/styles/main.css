@@ -69,6 +69,8 @@ header h1 {
 
 .card_value {
   font-size: 6em;
+  line-height: 2em;  
+  height: 2em;
   text-align: center;
   color: black;
   display: none;
